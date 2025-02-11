@@ -39,11 +39,11 @@ function App() {
     <>
       <ViewButton view={view} setView={setView} />
 
-      <h1 className='underline bg-slate-200'>Good morning, Abi. ☕️</h1>
+      <h1 className=''>Good morning, Abi. ☕️</h1>
       {view === View.ALL ? (
         <Articles articles={articles} />
       ) : (
-        <div className='blogs'>
+        <div className='blogs grid grid-cols-2'>
           {Object.entries(blogs).map((blogItem, i) => (
             <Blog key={i} title={blogItem[0]} blogArticles={blogItem[1]} />
           ))}
