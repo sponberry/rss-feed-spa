@@ -1,0 +1,11 @@
+THINGS I COULD DO WITH THIS APP
+
+* Refine CSS and UI
+* Extract state into Redux or something like it
+* Resolve all TS errors
+* Add more view options
+* Add a login page
+* Review security of app
+* Hook up with a CMS where feeds are added
+* Add a DB for logins and user saved feed data
+* Write integration and unit tests

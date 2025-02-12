@@ -2,7 +2,7 @@ import Article from './Article';
 
 const Articles = ({ articles }) => {
   return (
-    <div className='articles'>
+    <div className='articles grid gap-8'>
       {articles.map((article, i) => (
         <Article
           key={i}

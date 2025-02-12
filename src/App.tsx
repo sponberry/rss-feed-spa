@@ -39,7 +39,7 @@ function App() {
     <>
       <ViewButton view={view} setView={setView} />
 
-      <h1 className=''>Good morning, Abi. ☕️</h1>
+      <h1 className='font-mono m-5 tracking-wide'>Good morning, Abi. ☕️</h1>
       {view === View.ALL ? (
         <Articles articles={articles} />
       ) : (
