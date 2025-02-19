@@ -9,3 +9,4 @@ THINGS I COULD DO WITH THIS APP
 * Hook up with a CMS where feeds are added
 * Add a DB for logins and user saved feed data
 * Write integration and unit tests
+* only load 10 articles at a time, add a load more button

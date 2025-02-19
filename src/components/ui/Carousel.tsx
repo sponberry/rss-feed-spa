@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import Article from '../layout/Article';
+import { useState } from 'react';
+import { ArticleType } from '../../types';
+import Article from '../layout/Article.tsx';
+import { JSX } from 'react';
 
-const Carousel = ({ articles }) => {
+const Carousel = ({ articles }: { articles: ArticleType[] }): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {

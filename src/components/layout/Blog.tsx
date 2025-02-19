@@ -1,7 +1,8 @@
-import Articles from './Articles';
-import Carousel from '../ui/Carousel';
+import Carousel from '../ui/Carousel.tsx';
+import { ArticleType } from '../../types';
+import { JSX } from 'react';
 
-const Blog = ({ title, blogArticles }) => {
+const Blog = ({ title, blogArticles }: { title: string, blogArticles: ArticleType[]}): JSX.Element => {
   console.log(blogArticles);
   return (
     <div className='p-8 col-span-1'>

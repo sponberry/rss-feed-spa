@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import Blog from './components/layout/Blog';
-import ViewButton from './components/ui/ViewButton';
-import { View } from './utils/types';
-import Articles from './components/layout/Articles';
+import Blog from './components/layout/Blog.tsx';
+import ViewButton from './components/ui/ViewButton.tsx';
+import { ArticleType, BlogInterface, View } from './types';
+import Articles from './components/layout/Articles.tsx';
 
 function App() {
   const [view, setView] = useState(View.ALL);
-  const [articles, setArticles] = useState([]);
-  const [blogs, setBlogs] = useState({});
+  const [articles, setArticles] = useState<ArticleType[]>([]);
+  const [blogs, setBlogs] = useState<BlogInterface>({});
   console.log(articles);
+  console.log(blogs);
   // add option to switch between /all and /blogs
 
   const getArticles = async () => {
@@ -32,7 +33,11 @@ function App() {
   };
 
   useEffect(() => {
-    view === View.ALL ? getArticles() : getBlogs();
+    if (view === View.ALL) {
+      getArticles();
+    } else {
+      getBlogs();
+    };
   }, [view]);
 
   return (

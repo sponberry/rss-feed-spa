@@ -1,6 +1,7 @@
-import { View } from '../../utils/types';
+import { View } from '../../types/index';
+import { JSX } from 'react';
 
-const ViewButton = ({ view, setView }) => {
+const ViewButton = ({ view, setView }: { view: View, setView: (view: View.ALL | View.BLOGS) => void }): JSX.Element => {
   return (
     <button
       onClick={() =>

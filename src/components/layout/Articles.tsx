@@ -1,6 +1,7 @@
 import Article from './Article';
+import { ArticleType } from '../../types';
 
-const Articles = ({ articles }) => {
+const Articles = ({ articles }: { articles: ArticleType[]}) => {
   return (
     <div className='articles grid gap-8'>
       {articles.map((article, i) => (

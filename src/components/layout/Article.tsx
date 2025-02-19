@@ -1,5 +1,7 @@
-const Article = ({ title, date, url, content }) => {
-  const formatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+import { JSX } from "react";
+
+const Article = ({ title, date, url, content }: { title: string, date: string, url: string, content: string }): JSX.Element => {
+  const formatOptions: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
   const articleDate = new Date(date).toLocaleDateString('en-GB', formatOptions);
   const maxContentLength = 350;
 
